@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    transform-style: preserve-3d;
+    font-family: 'berthold';
+}
+
+@font-face{
+    font-family: 'berthold';
+    src: url(./fonts/BertholdTypes_BertholdAkzidenzGroteskBERegular.ttf) format('truetype');
+}
+
+body{
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header p{
+    max-width: 80vw;
+}
+
+.container{
+    position: relative;
+    column-count: 4;
+    padding: 20px;
+}
+
+.image{
+    display: inline-block;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    transition: 0.25s ease-in-out;
+}
+
+.image:hover img{
+    transform: scale(1.1);
+}
+
+.container h1{
+    position: absolute;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    background: #5c5c5c;
+    color: white;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+
+.image:hover h1{
+    opacity: 0.5;
+}
+
+footer{
+    display: flex;
+    height: 20vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width:1024px){
+    .container h1{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .container{
+        column-count: 3;
+    }
+}
+
+@media screen and (max-width:425px){
+    .container{
+        column-count: 2;
+    }
+    .container h1{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:375px){
+    .container{
+        column-count: 1;
+    }
+    .container h1{
+        font-size: 15px;
+    }
+}
